@@ -7,7 +7,7 @@ import java.util.List;
 /** 
  * @Description:  
  * @Author: lidongge
- * @Date: 2019/8/28 15:31
+ * @Date: 2019/8/28 16:19
  */
 public interface JdbcService {
     List<LoginModel> queryList();
