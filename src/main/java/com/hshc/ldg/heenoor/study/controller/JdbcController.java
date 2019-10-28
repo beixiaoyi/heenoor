@@ -2,6 +2,7 @@ package com.hshc.ldg.heenoor.study.controller;
 
 import com.hshc.ldg.heenoor.study.model.LoginModel;
 import com.hshc.ldg.heenoor.study.service.JdbcService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import java.util.List;
  * @Author: lidongge
  * @Date: 2019/3/12 14:53
  */
+@Slf4j
 @Controller
 @RequestMapping("/jdbc")
 public class JdbcController {
@@ -38,7 +40,7 @@ public class JdbcController {
         List<LoginModel> loginModels = jdbcService.queryList();
 
         for (LoginModel model:loginModels) {
-            System.out.println(model.getSysCode());
+            log.info("哈哈哈：{}",model.getSysCode());
         }
 
         return modelAndView;
