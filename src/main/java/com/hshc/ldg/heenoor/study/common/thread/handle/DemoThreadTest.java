@@ -10,6 +10,8 @@ import java.util.concurrent.CountDownLatch;
  * @Description:
  * @Author: lidongge
  * @Date: 2019/10/29 10:47
+ *
+ *CountDownLatch  https://yq.aliyun.com/articles/592274
  */
 @Slf4j
 public class DemoThreadTest implements Runnable{
