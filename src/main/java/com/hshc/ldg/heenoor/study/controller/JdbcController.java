@@ -1,6 +1,8 @@
 package com.hshc.ldg.heenoor.study.controller;
 
 import com.hshc.ldg.heenoor.study.common.thread.handle.DemoThreadTest;
+import com.hshc.ldg.heenoor.study.enums.EnumUtil;
+import com.hshc.ldg.heenoor.study.enums.PlateTypeEnum;
 import com.hshc.ldg.heenoor.study.model.LoginModel;
 import com.hshc.ldg.heenoor.study.service.JdbcService;
 import com.hshc.ldg.heenoor.study.util.ListUtils;
@@ -50,23 +52,43 @@ public class JdbcController {
 
     public  static final int LATCH_TIME_OUT = 8 ;
 
+    /**
+     * jdbc使用范例
+     *
+     * 枚举Enum 使用范例
+     *
+     * @param modelAndView
+     * @param req
+     * @return
+     * @throws InterruptedException
+     */
     @RequestMapping("/index")
     public ModelAndView index(ModelAndView modelAndView, HttpServletRequest req) throws InterruptedException {
         modelAndView.setViewName("/web/demo/demo");
 
-        List<LoginModel> loginModels = jdbcService.queryList();
+//        List<LoginModel> loginModels = jdbcService.queryList();
 
-        long startTime0 = System.currentTimeMillis();
-        for (LoginModel model:loginModels) {
-            log.info("哈哈哈：{}",model.getSysCode());
-        }
-        long endTime0 = System.currentTimeMillis();
-        log.info("正常打印 耗时："+ (endTime0 - startTime0) + " ms");
+//        long startTime0 = System.currentTimeMillis();
+//        for (LoginModel model:loginModels) {
+//            log.info("哈哈哈：{}",model.getSysCode());
+//        }
+//        long endTime0 = System.currentTimeMillis();
+//        log.info("正常打印 耗时："+ (endTime0 - startTime0) + " ms");
 
-        this.studyThread(loginModels);
+//        this.studyThread(loginModels);
+
+        //Enum
+        modelAndView.addObject("plateTypeEnum",EnumUtil.getList(PlateTypeEnum.class));
+
+
         return modelAndView;
     }
 
+    /**
+     * CountDownLatch 使用范例
+     * @param loginModels
+     * @throws InterruptedException
+     */
     public void studyThread(List<LoginModel> loginModels) throws InterruptedException{
         //讲查询列表按线程数分组
         Map spiltMap = ListUtils.spiltList(loginModels, MAX_THREAD_COUNT);

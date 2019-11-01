@@ -54,9 +54,10 @@ public class ListUtils {
 
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
-       List<List<Integer>> lists = Lists.partition(list,2);
+       List<List<Integer>> lists = Lists.partition(list,5);
 
         System.out.println(lists);
+        //[[1, 2, 3, 4, 5], [6, 7, 8]]
     }
 
 }

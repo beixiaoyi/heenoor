@@ -8,5 +8,11 @@
 
 demo Page content
 
+<select id="plateType" class="form-control" title="请选择">
+    <option value="">请选择</option>
+    <option th:each="item,itemStat : ${plateTypeEnum}" th:value="${item.code}"
+            th:text="${item.name}"></option>
+</select>
+
 </body>
 </html>
