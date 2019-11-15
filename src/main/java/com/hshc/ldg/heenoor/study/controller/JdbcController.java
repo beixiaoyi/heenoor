@@ -1,7 +1,7 @@
 package com.hshc.ldg.heenoor.study.controller;
 
 import com.hshc.ldg.heenoor.study.common.thread.handle.DemoThreadTest;
-import com.hshc.ldg.heenoor.study.enums.EnumUtil;
+import com.hshc.ldg.heenoor.study.baseEnums.EnumUtil;
 import com.hshc.ldg.heenoor.study.enums.PlateTypeEnum;
 import com.hshc.ldg.heenoor.study.model.LoginModel;
 import com.hshc.ldg.heenoor.study.service.JdbcService;

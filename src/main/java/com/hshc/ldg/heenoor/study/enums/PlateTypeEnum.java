@@ -1,6 +1,8 @@
 package com.hshc.ldg.heenoor.study.enums;
 
 
+import com.hshc.ldg.heenoor.study.baseEnums.ISEnum;
+
 /**
  * @Description:  牌照性质
  * @Author: lidongge
@@ -30,7 +32,7 @@ public enum PlateTypeEnum implements  ISEnum {
     }
 
     public static String findName(Integer code){
-        for (PlateTypeEnum item:PlateTypeEnum.values()) {
+        for (PlateTypeEnum item: PlateTypeEnum.values()) {
             if (item.eq(code)){
                 return item.getName();
             }

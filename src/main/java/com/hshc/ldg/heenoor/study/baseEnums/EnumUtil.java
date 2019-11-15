@@ -1,4 +1,4 @@
-package com.hshc.ldg.heenoor.study.enums;
+package com.hshc.ldg.heenoor.study.baseEnums;
 
 
 import java.util.ArrayList;

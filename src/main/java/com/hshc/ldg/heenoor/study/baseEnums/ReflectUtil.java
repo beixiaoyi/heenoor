@@ -1,9 +1,8 @@
-package com.hshc.ldg.heenoor.study.enums;
+package com.hshc.ldg.heenoor.study.baseEnums;
 
 
 //import com.hshc.basetools.log.LogUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;

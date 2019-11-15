@@ -1,4 +1,4 @@
-package com.hshc.ldg.heenoor.study.enums;
+package com.hshc.ldg.heenoor.study.baseEnums;
 
 /**
  * Created by guoqiang on 2017/6/17.
