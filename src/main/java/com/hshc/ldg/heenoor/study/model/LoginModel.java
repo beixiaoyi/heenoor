@@ -1,5 +1,6 @@
 package com.hshc.ldg.heenoor.study.model;
 
+import com.hshc.hshccommons.plugins.excel.export.anno.ExportField;
 import lombok.Data;
 
 /**
@@ -16,8 +17,10 @@ public class LoginModel {
 
     private String loginTime;
 
+    @ExportField(name = "用户代码")
     private String userCode;
 
+    @ExportField(name = "用户名称")
     private String userName;
 
     private String unitSys;
