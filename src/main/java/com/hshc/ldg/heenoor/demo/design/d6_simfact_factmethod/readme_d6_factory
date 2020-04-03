@@ -1,0 +1,6 @@
+
+
+		//my总结：一句话
+//		简单工厂，一个工厂生产多种产品。只有一个工厂 	switch case Fact --> ProA,ProB,ProC
+//		工厂方法，一个工厂只生产一种产品。存在多个工厂	FactA -->FactB, ProductA --> ProB
+//		抽象工厂，一个工厂生产多种产品。一个存在多个工厂	Fact1 --> （ProA1 ProB1）, Fact2 --> (ProA2 ProB2)
